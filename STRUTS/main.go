@@ -33,7 +33,7 @@ func main() {
 	ashuPointer := &ashu //to a pointer 
 	println("memory address : ", ashuPointer)
 
-	ashuPointer.updateName("Gunjan")
+	ashu.updateName("Gunjan")
 	ashu.print()
 }
 
@@ -42,9 +42,10 @@ func (p person) print() {
 }
 
 //Receiver : expecting a pointer as input
+//GO benefits : Automatically turn a value to pointer if we receive by *type
 func (p *person) updateName(newFirstName string) {
 	//This is used to manipulate the value of pointer
-	(*p).firstName = newFirstName
+	p.firstName = newFirstName
 }
 
 /**
