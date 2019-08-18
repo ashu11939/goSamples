@@ -34,6 +34,9 @@ func main() {
 	// fmt.Println(<- channel)
 
 	for {
+
+		//Never access the variables from child routines of main routines instead pass the values 
+		//inside functions
 		go func() { //function literal
 			time.Sleep(time.Second)
 			checkLink(<- channel, channel)
