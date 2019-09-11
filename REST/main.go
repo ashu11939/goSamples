@@ -13,7 +13,7 @@ import (
 
 //Article ... struct definition
 type Article struct {
-	Id      string `json:"id"`
+	ID      string `json:"id"`
 	Title   string `json:"title"`
 	Desc    string `json:"desc"`
 	Content string `json:"content"`
@@ -70,8 +70,8 @@ func createNewArticle(w http.ResponseWriter, r *http.Request) {
 
 func returnArticles() []Article {
 	articles := []Article{
-		Article{Id: "1", Title: "ZNMD", Desc: "Zindagi Na Milegi Dobara", Content: "Best Movie Ever"},
-		Article{Id: "2", Title: "CCOB", Desc: "Curious Case of Benjamin Button", Content: "Best Movie Ever 2"},
+		Article{ID: "1", Title: "ZNMD", Desc: "Zindagi Na Milegi Dobara", Content: "Best Movie Ever"},
+		Article{ID: "2", Title: "CCOB", Desc: "Curious Case of Benjamin Button", Content: "Best Movie Ever 2"},
 	}
 	return articles
 }
